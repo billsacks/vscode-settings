@@ -1,0 +1,128 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+   "julia.symbolCacheDownload": true,
+   "julia.executablePath": "/Users/sacks/.juliaup/bin/julia",
+    "julia.enableTelemetry": true,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.mouseWheelScrollSensitivity": 0.2,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.mouseWheelScrollSensitivity": 0.2,
+    "terminal.integrated.mouseWheelScrollSensitivity": 0.2,
+    "editor.smoothScrolling": true,
+    "workbench.colorTheme": "GitHub Light Default",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "fortran.formatting.findentArgs": [
+        "--indent=3",
+        "--indent_module=2",
+        "--indent_procedure=2",
+        "--indent_associate=0"
+      ],    
+    "gitlens.views.contributors.showStatistics": true,
+    "git.openRepositoryInParentFolders": "always",
+    "git.untrackedChanges": "separate",
+    "gitlens.currentLine.enabled": false,
+    "git.countBadge": "tracked",
+    "[git-commit]": {
+        "editor.quickSuggestions": {
+            "other": false,      // or "off"
+            "comments": false,   // or "off"
+            "strings": false     // or "off"
+        },
+        "editor.rulers": [
+            72
+        ],
+        "rewrap.autoWrap.enabled": true,
+        "rewrap.wrappingColumn": 72,
+        "workbench.editor.restoreViewState": false
+   },
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "deepIndent",
+    "gitlens.codeLens.enabled": false,
+   "git.showProgress": false,
+    "editor.parameterHints.enabled": false,
+   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "window.density.editorTabHeight": "compact",
+    "editor.lineHeight": 1.3,
+    "editor.hover.enabled": false,
+    "editor.stickyScroll.maxLineCount": 10,
+    "editor.stickyScroll.scrollWithEditor": false,
+   "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.tabSize": 3,
+    "rewrap.wrappingColumn": 90,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "[plaintext]": {
+        "editor.quickSuggestions": {
+            "other": false,      // or "off"
+            "comments": false,   // or "off"
+            "strings": false     // or "off"
+        },
+        "editor.rulers": [
+            90
+        ],
+        "rewrap.autoWrap.enabled": true,
+        "rewrap.wrappingColumn": 90,
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false
+    },
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+"diffEditor.renderSideBySide": true,
+"editor.detectIndentation": false,
+"C_Cpp.dimInactiveRegions": false,
+"gitlens.views.commitDetails.files.layout": "list",
+"[python]": {
+   "diffEditor.ignoreTrimWhitespace": false
+},
+"cSpell.maxNumberOfProblems": 1000,
+"cSpell.spellCheckDelayMs": 1000,
+"cSpell.minWordLength": 3,
+"[markdown]": {
+   "editor.wrappingIndent": "same"
+},
+"[restructuredtext]": {
+   "editor.quickSuggestions": {
+      "other": false,      // or "off"
+      "comments": false,   // or "off"
+      "strings": false     // or "off"
+  },
+},
+"cSpell.languageSettings": [
+   {
+      // From https://github.com/streetsidesoftware/vscode-spell-checker/issues/107#issuecomment-2182287169
+      "languageId": "python,cpp,c",
+      "includeRegExpList": [
+          // For Python
+          "comments",
+          "strings",
+          // For C++ and C
+          "CStyleComment",
+          "string"
+      ]
+  },
+],
+"editor.formatOnPaste": true,
+"cmake.pinnedCommands": [
+   "workbench.action.tasks.configureTaskRunner",
+   "workbench.action.tasks.runTask"
+],
+"git.ignoreSubmodules": true,
+"git.detectSubmodules": false,
+"editor.indentSize": "tabSize",
+"editor.useTabStops": false,
+"makefile.configureOnOpen": true,
+"editor.guides.bracketPairs": true,
+"editor.guides.bracketPairsHorizontal": false,
+"editor.occurrencesHighlight": "off",
+"editor.quickSuggestions": {
+   "other": "off"
+},
+"editor.suggestOnTriggerCharacters": false,
+"editor.lineNumbers": "off",
+"workbench.activityBar.location": "top",
+"redhat.telemetry.enabled": true,
+}
