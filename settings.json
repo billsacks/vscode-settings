@@ -125,4 +125,6 @@
 "editor.lineNumbers": "off",
 "workbench.activityBar.location": "top",
 "redhat.telemetry.enabled": true,
+"editor.find.seedSearchStringFromSelection": "selection",
+"editor.find.cursorMoveOnType": false,
 }
