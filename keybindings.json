@@ -860,4 +860,25 @@
       "key": "ctrl+alt+cmd+g",
       "command": "extension.jumpy-line"
    },
+   // Make it easy to use selection anchors, similar to emacs's mark
+   {
+      "key": "ctrl+space",
+      "command": "editor.action.setSelectionAnchor",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "cmd+k cmd+b",
+      "command": "-editor.action.setSelectionAnchor",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+shift+space",
+      "command": "editor.action.selectFromAnchorToCursor",
+      "when": "editorTextFocus && selectionAnchorSet"
+   },
+   {
+      "key": "cmd+k cmd+k",
+      "command": "-editor.action.selectFromAnchorToCursor",
+      "when": "editorTextFocus && selectionAnchorSet"
+   },
 ]
