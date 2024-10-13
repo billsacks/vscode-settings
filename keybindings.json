@@ -850,5 +850,14 @@
    {
       "key": "cmd+9",
       "command": "-workbench.action.lastEditorInGroup"
-   }
+   },
+   // Add shortcuts for Jumpy extension
+   {
+      "key": "ctrl+cmd+g",
+      "command": "extension.jumpy-word"
+   },
+   {
+      "key": "ctrl+alt+cmd+g",
+      "command": "extension.jumpy-line"
+   },
 ]
