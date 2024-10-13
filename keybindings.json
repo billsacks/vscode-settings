@@ -32,7 +32,7 @@
       "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
    },
    {
-      "key": "ctrl+space",
+      "key": "alt+cmd+space",
       "command": "editor.action.inlineEdits.accept",
       "when": "inlineEditsVisible"
    },
