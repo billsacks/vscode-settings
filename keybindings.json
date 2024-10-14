@@ -913,4 +913,47 @@
       "key": "ctrl+x e",
       "command": "workbench.action.showEditorsInActiveGroup"
    },
+   // Use cmd+\ for jump to bracket and shift+cmd+\ for select to bracket
+   {
+      "key": "cmd+k \\",
+      "command": "workbench.action.terminal.split",
+      "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+   },
+   {
+      "key": "cmd+\\",
+      "command": "-workbench.action.terminal.split",
+      "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+   },
+   {
+      "key": "cmd+k \\",
+      "command": "workbench.action.splitEditor"
+   },
+   {
+      "key": "cmd+\\",
+      "command": "-workbench.action.splitEditor"
+   },
+   {
+      "key": "cmd+k \\",
+      "command": "workbench.action.terminal.splitActiveTab",
+      "when": "terminalProcessSupported && terminalTabsFocus"
+   },
+   {
+      "key": "cmd+\\",
+      "command": "-workbench.action.terminal.splitActiveTab",
+      "when": "terminalProcessSupported && terminalTabsFocus"
+   },
+   {
+      "key": "cmd+\\",
+      "command": "editor.action.jumpToBracket",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+cmd+\\",
+      "command": "-editor.action.jumpToBracket",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+cmd+\\",
+      "command": "editor.action.selectToBracket"
+   },
 ]
