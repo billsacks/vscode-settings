@@ -909,4 +909,13 @@
       "key": "ctrl+l p",
       "command": "-extension.openPrGitProvider"
    },
+   // Shortcuts for seeing most recently used editors
+   {
+      "key": "ctrl+x ctrl+e",
+      "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+   },
+   {
+      "key": "ctrl+x e",
+      "command": "workbench.action.showEditorsInActiveGroup"
+   },
 ]
