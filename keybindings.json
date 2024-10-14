@@ -891,4 +891,17 @@
       "command": "-editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
+   // Remove keybindings that conflict with ctrl+l to center editor window
+   {
+      "key": "ctrl+l c",
+      "command": "-extension.copyGitHubLinkToClipboard"
+   },
+   {
+      "key": "ctrl+l g",
+      "command": "-extension.openInGitHub"
+   },
+   {
+      "key": "ctrl+l p",
+      "command": "-extension.openPrGitProvider"
+   },
 ]

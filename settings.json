@@ -127,4 +127,5 @@
 "redhat.telemetry.enabled": true,
 "editor.find.seedSearchStringFromSelection": "selection",
 "editor.find.cursorMoveOnType": false,
+"center-editor-window.threeStateToggle": true,
 }
