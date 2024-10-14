@@ -351,6 +351,11 @@
    },
    {
       "key": "shift+cmd+right",
+      "command": "-cursorEndSelect",
+      "when": "textInputFocus"
+   },
+   {
+      "key": "shift+cmd+right",
       "command": "editor.action.smartSelect.expand",
       "when": "editorTextFocus"
    },
@@ -363,6 +368,11 @@
       "key": "ctrl+shift+cmd+right",
       "command": "-editor.action.smartSelect.expand",
       "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+cmd+left",
+      "command": "-cursorHomeSelect",
+      "when": "textInputFocus"
    },
    {
       "key": "shift+cmd+left",
