@@ -956,4 +956,39 @@
       "key": "shift+cmd+\\",
       "command": "editor.action.selectToBracket"
    },
+   // Commands for navigating between blank lines
+   {
+      "key": "ctrl+down", // whatever keybinding you want
+      "command": "cursorMove",
+      "args": {
+         "to": "nextBlankLine",
+      },
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+shift+down", // whatever keybinding you want
+      "command": "cursorMove",
+      "args": {
+         "to": "nextBlankLine",
+         "select": true // false is the default if omitted
+      },
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+up",
+      "command": "cursorMove",
+      "args": {
+         "to": "prevBlankLine",
+      },
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+shift+up",
+      "command": "cursorMove",
+      "args": {
+         "to": "prevBlankLine",
+         "select": true // false is the default if omitted
+      },
+      "when": "editorTextFocus"
+   },
 ]
