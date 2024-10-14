@@ -872,7 +872,7 @@
       "when": "editorTextFocus"
    },
    {
-      "key": "ctrl+shift+space",
+      "key": "ctrl+space",
       "command": "editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
