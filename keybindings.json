@@ -872,12 +872,7 @@
    },
    // Make it easy to use selection anchors, similar to emacs's mark
    {
-      "key": "ctrl+h",
-      "command": "-deleteLeft",
-      "when": "textInputFocus"
-   },
-   {
-      "key": "ctrl+h",
+      "key": "cmd+h",
       "command": "editor.action.setSelectionAnchor",
       "when": "editorTextFocus"
    },
@@ -887,7 +882,7 @@
       "when": "editorTextFocus"
    },
    {
-      "key": "ctrl+h",
+      "key": "cmd+h",
       "command": "editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
