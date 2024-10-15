@@ -991,4 +991,37 @@
       },
       "when": "editorTextFocus"
    },
+   // Commands for my saveandrestorecursorposition extension
+   {
+      "key": "cmd+f",
+      "command": "-actions.find",
+      "when": "editorFocus || editorIsOpen"
+   },
+   {
+      "key": "cmd+f",
+      "command": "saveandrestorecursorposition.findWithSavedCursorPosition",
+      // Note that this uses the same when clause as the overridden actions.find command
+      "when": "editorFocus || editorIsOpen"
+   },
+   {
+      "key": "ctrl+f",
+      "command": "-cursorRight",
+      "when": "textInputFocus"
+   },
+   {
+      "key": "ctrl+f",
+      "command": "saveandrestorecursorposition.returnToStartOfFind",
+      // I'm excluding editorIsOpen from this one (in contrast to findWithSavedCursorPosition)
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+cmd+,",
+      "command": "saveandrestorecursorposition.saveCursorPosition",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+,",
+      "command": "saveandrestorecursorposition.restoreCursorPosition",
+      "when": "editorTextFocus"
+   },
 ]
