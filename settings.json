@@ -125,7 +125,6 @@
 "workbench.activityBar.location": "top",
 "redhat.telemetry.enabled": true,
 "editor.find.seedSearchStringFromSelection": "selection",
-"editor.find.cursorMoveOnType": false,
 "center-editor-window.threeStateToggle": true,
 "editor.lineHeight": 1.3,
 "center-editor-window.offset": 0,
