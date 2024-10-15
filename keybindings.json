@@ -1015,7 +1015,11 @@
       "when": "editorFocus"
    },
    {
-      "key": "ctrl+cmd+,",
+      "key": "cmd+,",
+      "command": "-workbench.action.openSettings"
+   },
+   {
+      "key": "cmd+,",
       "command": "saveandrestorecursorposition.saveCursorPosition",
       "when": "editorTextFocus"
    },
