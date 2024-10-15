@@ -70,7 +70,7 @@
         "editor.unicodeHighlight.invisibleCharacters": false
     },
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-"diffEditor.renderSideBySide": true,
+"diffEditor.renderSideBySide": false,
 "editor.detectIndentation": false,
 "C_Cpp.dimInactiveRegions": false,
 "gitlens.views.commitDetails.files.layout": "list",
