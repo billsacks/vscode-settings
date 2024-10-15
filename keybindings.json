@@ -891,6 +891,28 @@
       "command": "-editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
+   {
+      "key": "cmd+c",
+      "command": "extension.multiCommand.execute",
+      "args": {
+         "sequence": [
+            "editor.action.selectFromAnchorToCursor",
+            "editor.action.clipboardCopyAction"
+         ]
+      },
+      "when": "editorTextFocus && selectionAnchorSet"
+   },
+   {
+      "key": "cmd+x",
+      "command": "extension.multiCommand.execute",
+      "args": {
+         "sequence": [
+            "editor.action.selectFromAnchorToCursor",
+            "editor.action.clipboardCutAction"
+          ]
+      },
+      "when": "editorTextFocus && selectionAnchorSet"
+   },
    // Remove keybindings that conflict with ctrl+l to center editor window
    {
       "key": "ctrl+l c",
