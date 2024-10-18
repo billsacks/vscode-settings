@@ -1055,6 +1055,10 @@
       "command": "-workbench.action.openSettings"
    },
    {
+      "key": "cmd+k ,",
+      "command": "workbench.action.openSettings"
+   },
+   {
       "key": "cmd+,",
       "command": "saveandrestorecursorposition.saveCursorPosition",
       "when": "editorTextFocus"
