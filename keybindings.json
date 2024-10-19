@@ -875,14 +875,45 @@
       "key": "cmd+0",
       "command": "-workbench.action.focusSideBar"
    },
-   // Add shortcuts for Jumpy extension
+   // Add shortcuts for Jumpy extension. Use t key for ease of pressing (mnemonic: goTo).
+   // Also put gotoLine on t because it's a similar command, and to free up ctrl+g for
+   // find previous.
+   //
+   // First remap showAllSymbols to free up cmd+t (note the parallel with the existing
+   // cmd+shift+o for go to symbol in editor), and transpose to free up ctrl+t.
    {
-      "key": "ctrl+cmd+g",
+      "key": "ctrl+shift+cmd+o",
+      "command": "workbench.action.showAllSymbols"
+   },
+   {
+      "key": "cmd+t",
+      "command": "-workbench.action.showAllSymbols"
+   },
+   {
+      "key": "ctrl+z",
+      "command": "editor.action.transposeLetters",
+      "when": "textInputFocus && !editorReadonly"
+   },
+   {
+      "key": "ctrl+t",
+      "command": "-editor.action.transposeLetters",
+      "when": "textInputFocus && !editorReadonly"
+   },
+   {
+      "key": "cmd+t",
       "command": "extension.jumpy-word"
    },
    {
-      "key": "ctrl+alt+cmd+g",
+      "key": "ctrl+t",
       "command": "extension.jumpy-line"
+   },
+   {
+      "key": "ctrl+cmd+t",
+      "command": "workbench.action.gotoLine"
+   },
+   {
+      "key": "ctrl+g",
+      "command": "-workbench.action.gotoLine"
    },
    // Make it easy to use selection anchors, similar to emacs's mark
    {
@@ -923,7 +954,7 @@
          "sequence": [
             "editor.action.selectFromAnchorToCursor",
             "editor.action.clipboardCutAction"
-          ]
+         ]
       },
       "when": "editorTextFocus && selectionAnchorSet"
    },
@@ -1069,7 +1100,96 @@
       "when": "editorTextFocus"
    },
    {
-     "key": "ctrl+cmd+,",
-     "command": "saveandrestorecursorposition.saveAndRestoreCursorPosition"
+      "key": "ctrl+cmd+,",
+      "command": "saveandrestorecursorposition.saveAndRestoreCursorPosition"
    },
+   // Slightly easier keybindings for navigating search results:
+   // - ctrl+g instead of cmd+shift+g for find previous (this is easier, and note the
+   //   mnemonic that, on my Kinesis keyboard, ctrl is above cmd - hence ctrl for finding
+   //   up and cmd for finding down).
+   // - Add shift to cmd+g or ctrl+g to find next/previous selection (mnemonic: shift
+   //   selects things)
+   // - Down and up arrows instead of enter / shift-enter for navigating find results.
+   //   Note that this overrides using the arrows for navigating history, but opt+up /
+   //   opt+down can already be used for that, too.
+   {
+      "key": "ctrl+g",
+      "command": "editor.action.previousMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "shift+cmd+g",
+      "command": "-editor.action.previousMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+g",
+      "command": "workbench.action.terminal.findPrevious",
+      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+   },
+   {
+      "key": "shift+cmd+g",
+      "command": "-workbench.action.terminal.findPrevious",
+      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+   },
+   {
+      "key": "shift+cmd+g",
+      "command": "editor.action.nextSelectionMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "cmd+f3",
+      "command": "-editor.action.nextSelectionMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "editor.action.previousSelectionMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "shift+cmd+f3",
+      "command": "-editor.action.previousSelectionMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "down",
+      "command": "-history.showNext",
+      "when": "historyNavigationForwardsEnabled && historyNavigationWidgetFocus && !isComposing && !suggestWidgetVisible"
+   },
+   {
+      "key": "up",
+      "command": "-history.showPrevious",
+      "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !isComposing && !suggestWidgetVisible"
+   },
+   {
+      "key": "down",
+      "command": "editor.action.nextMatchFindAction",
+      "when": "editorFocus && findInputFocussed"
+   },
+   {
+      "key": "enter",
+      "command": "-editor.action.nextMatchFindAction",
+      "when": "editorFocus && findInputFocussed"
+   },
+   {
+      "key": "up",
+      "command": "editor.action.previousMatchFindAction",
+      "when": "editorFocus && findInputFocussed"
+   },
+   {
+      "key": "shift+enter",
+      "command": "-editor.action.previousMatchFindAction",
+      "when": "editorFocus && findInputFocussed"
+   }
 ]
