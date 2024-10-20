@@ -1058,51 +1058,6 @@
       },
       "when": "editorTextFocus"
    },
-   // Commands for my saveandrestorecursorposition extension
-   {
-      "key": "cmd+f",
-      "command": "-actions.find",
-      "when": "editorFocus || editorIsOpen"
-   },
-   {
-      "key": "cmd+f",
-      "command": "saveandrestorecursorposition.findWithSavedCursorPosition",
-      // Note that this uses the same when clause as the overridden actions.find command
-      "when": "editorFocus || editorIsOpen"
-   },
-   {
-      "key": "ctrl+f",
-      "command": "-cursorRight",
-      "when": "textInputFocus"
-   },
-   {
-      "key": "ctrl+f",
-      "command": "saveandrestorecursorposition.returnToStartOfFind",
-      // I'm excluding editorIsOpen from this one (in contrast to findWithSavedCursorPosition)
-      "when": "editorFocus"
-   },
-   {
-      "key": "cmd+,",
-      "command": "-workbench.action.openSettings"
-   },
-   {
-      "key": "cmd+k ,",
-      "command": "workbench.action.openSettings"
-   },
-   {
-      "key": "cmd+,",
-      "command": "saveandrestorecursorposition.saveCursorPosition",
-      "when": "editorTextFocus"
-   },
-   {
-      "key": "ctrl+,",
-      "command": "saveandrestorecursorposition.restoreCursorPosition",
-      "when": "editorTextFocus"
-   },
-   {
-      "key": "ctrl+cmd+,",
-      "command": "saveandrestorecursorposition.saveAndRestoreCursorPosition"
-   },
    // Slightly easier keybindings for navigating search results:
    // - ctrl+g instead of cmd+shift+g for find previous (this is easier, and note the
    //   mnemonic that, on my Kinesis keyboard, ctrl is above cmd - hence ctrl for finding
@@ -1234,5 +1189,50 @@
    {
       "key": "cmd+e",
       "command": "-actions.findWithSelection"
-   }
+   },
+   // Commands for my saveandrestorecursorposition extension
+   {
+      "key": "cmd+f",
+      "command": "-actions.find",
+      "when": "editorFocus || editorIsOpen"
+   },
+   {
+      "key": "cmd+f",
+      "command": "saveandrestorecursorposition.findWithSavedCursorPosition",
+      // Note that this uses the same when clause as the overridden actions.find command
+      "when": "editorFocus || editorIsOpen"
+   },
+   {
+      "key": "ctrl+f",
+      "command": "-cursorRight",
+      "when": "textInputFocus"
+   },
+   {
+      "key": "ctrl+f",
+      "command": "saveandrestorecursorposition.returnToStartOfFind",
+      // I'm excluding editorIsOpen from this one (in contrast to findWithSavedCursorPosition)
+      "when": "editorFocus"
+   },
+   {
+      "key": "cmd+,",
+      "command": "-workbench.action.openSettings"
+   },
+   {
+      "key": "cmd+k ,",
+      "command": "workbench.action.openSettings"
+   },
+   {
+      "key": "cmd+,",
+      "command": "saveandrestorecursorposition.saveCursorPosition",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+,",
+      "command": "saveandrestorecursorposition.restoreCursorPosition",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+cmd+,",
+      "command": "saveandrestorecursorposition.saveAndRestoreCursorPosition"
+   },
 ]
