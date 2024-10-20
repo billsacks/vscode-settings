@@ -1191,5 +1191,48 @@
       "key": "shift+enter",
       "command": "-editor.action.previousMatchFindAction",
       "when": "editorFocus && findInputFocussed"
+   },
+   // Use shift+cmd+f for find with selection because that's more mnemonic (shift
+   // selects); so use ctrl+cmd+f for findInFiles
+   {
+      "key": "ctrl+cmd+f",
+      "command": "-workbench.action.toggleFullScreen",
+      "when": "!isIOS"
+   },
+   {
+      "key": "ctrl+cmd+f",
+      "command": "workbench.action.findInFiles"
+   },
+   {
+      "key": "shift+cmd+f",
+      "command": "-workbench.action.findInFiles"
+   },
+   {
+      "key": "ctrl+cmd+f",
+      "command": "workbench.action.terminal.searchWorkspace",
+      "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+   },
+   {
+      "key": "shift+cmd+f",
+      "command": "-workbench.action.terminal.searchWorkspace",
+      "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+   },
+   {
+      "key": "ctrl+cmd+f",
+      "command": "workbench.view.search",
+      "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+   },
+   {
+      "key": "shift+cmd+f",
+      "command": "-workbench.view.search",
+      "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+   },
+   {
+      "key": "shift+cmd+f",
+      "command": "actions.findWithSelection"
+   },
+   {
+      "key": "cmd+e",
+      "command": "-actions.findWithSelection"
    }
 ]
