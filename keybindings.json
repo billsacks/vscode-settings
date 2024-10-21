@@ -1098,18 +1098,8 @@
       "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
    },
    {
-      "key": "shift+cmd+g",
-      "command": "editor.action.nextSelectionMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
       "key": "cmd+f3",
       "command": "-editor.action.nextSelectionMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
-      "key": "ctrl+shift+g",
-      "command": "editor.action.previousSelectionMatchFindAction",
       "when": "editorFocus"
    },
    {
@@ -1148,7 +1138,8 @@
       "when": "editorFocus && findInputFocussed"
    },
    // Use shift+cmd+f for find with selection because that's more mnemonic (shift
-   // selects); so use ctrl+cmd+f for findInFiles
+   // selects); so use ctrl+cmd+f for findInFiles. (Note that shift+cmd+f has been moved
+   // to the saveandrestorecursorposition keybindings below.)
    {
       "key": "ctrl+cmd+f",
       "command": "-workbench.action.toggleFullScreen",
@@ -1183,10 +1174,6 @@
       "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
    },
    {
-      "key": "shift+cmd+f",
-      "command": "actions.findWithSelection"
-   },
-   {
       "key": "cmd+e",
       "command": "-actions.findWithSelection"
    },
@@ -1201,6 +1188,21 @@
       "command": "saveandrestorecursorposition.findWithSavedCursorPosition",
       // Note that this uses the same when clause as the overridden actions.find command
       "when": "editorFocus || editorIsOpen"
+   },
+   {
+      "key": "shift+cmd+f",
+      "command": "saveandrestorecursorposition.findWithSelectionWithSavedCursorPosition",
+      "when": "editorFocus"
+   },
+   {
+      "key": "shift+cmd+g",
+      "command": "saveandrestorecursorposition.findNextSelectionWithSavedCursorPosition",
+      "when": "editorFocus"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "saveandrestorecursorposition.findPreviousSelectionWithSavedCursorPosition",
+      "when": "editorFocus"
    },
    {
       "key": "ctrl+f",
