@@ -128,4 +128,44 @@
 "center-editor-window.threeStateToggle": true,
 "editor.lineHeight": 1.3,
 "center-editor-window.offset": 0,
+"editor.tokenColorCustomizations": {
+   "textMateRules": [
+      {
+         "scope": "heading.1.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#6b106f",
+         }
+      },
+      {
+         "scope": "heading.2.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#005000",
+         }
+      },
+      {
+         "scope": "heading.3.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#00008b",
+         }
+      },
+      {
+         "scope": "heading.4.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#8b1a1a",
+         }
+      },
+      {
+         "scope": "heading.5.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#f76328",
+         }
+      },
+      {
+         "scope": "heading.6.markdown entity.name.section.markdown",
+         "settings": {
+            "foreground": "#fccf3e",
+         }
+      },
+   ]
+}
 }
