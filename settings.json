@@ -103,6 +103,13 @@
           "string"
       ]
   },
+  {
+      "languageId": "FortranFreeForm",
+      "includeRegExpList": [
+         "string",
+         "!.*"
+      ]
+  }
 ],
 "editor.formatOnPaste": true,
 "cmake.pinnedCommands": [
