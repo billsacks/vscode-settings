@@ -1237,4 +1237,14 @@
       "key": "ctrl+cmd+,",
       "command": "saveandrestorecursorposition.saveAndRestoreCursorPosition"
    },
+   {
+      "key": "cmd+b",
+      "command": "-markdown.extension.editing.toggleBold",
+      "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+   },
+   {
+      "key": "cmd+i",
+      "command": "-markdown.extension.editing.toggleItalic",
+      "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+   },
 ]
