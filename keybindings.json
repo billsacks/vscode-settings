@@ -1247,4 +1247,28 @@
       "command": "-markdown.extension.editing.toggleItalic",
       "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
    },
+   // Use ctrl+h to toggle highlighting occurrences of current symbol. Note that, when
+   // turning it on, I need to move the cursor (e.g., left/right arrow) for the current
+   // occurrence to be highlighted.
+   {
+      "key": "ctrl+h",
+      "command": "-deleteLeft",
+      "when": "textInputFocus"
+   },
+   {
+      "key": "ctrl+h",
+      "command": "toggle",
+      "when": "editorTextFocus",
+      "args": {
+         "id": "occurrencesHighlight",
+         "value": [
+            {
+               "editor.occurrencesHighlight": "singleFile"
+            },
+            {
+               "editor.occurrencesHighlight": "off"
+            }
+         ]
+      }
+   }
 ]
