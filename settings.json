@@ -176,4 +176,5 @@
    ]
 },
 "jumpy.wordRegexp": "\\w{1,}",
+"search.quickOpen.history.filterSortOrder": "recency"
 }
