@@ -189,5 +189,9 @@
    "launchpad": false
 },
 "diffEditor.maxComputationTime": 0,
-"search.quickOpen.history.filterSortOrder": "recency"
+"search.quickOpen.history.filterSortOrder": "recency",
+"trailing-spaces.deleteModifiedLinesOnly": true,
+"trailing-spaces.trimOnSave": true,
+"trailing-spaces.liveMatching": false,
+"trailing-spaces.highlightCurrentLine": false
 }
