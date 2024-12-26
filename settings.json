@@ -54,7 +54,7 @@
    "editor.stickyScroll.defaultModel": "foldingProviderModel",
     "editor.tabSize": 3,
     "rewrap.wrappingColumn": 90,
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "[plaintext]": {
         "editor.quickSuggestions": {
             "other": false,      // or "off"
@@ -176,5 +176,18 @@
    ]
 },
 "jumpy.wordRegexp": "\\w{1,}",
+"gitlens.views.scm.grouped.views": {
+   "commits": true,
+   "branches": true,
+   "remotes": true,
+   "stashes": true,
+   "tags": true,
+   "worktrees": true,
+   "contributors": true,
+   "repositories": false,
+   "searchAndCompare": true,
+   "launchpad": false
+},
+"diffEditor.maxComputationTime": 0,
 "search.quickOpen.history.filterSortOrder": "recency"
 }
