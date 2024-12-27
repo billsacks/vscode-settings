@@ -917,7 +917,7 @@
    },
    // Make it easy to use selection anchors, similar to emacs's mark
    {
-      "key": "cmd+h",
+      "key": "ctrl+g",
       "command": "editor.action.setSelectionAnchor",
       "when": "editorTextFocus"
    },
@@ -927,7 +927,7 @@
       "when": "editorTextFocus"
    },
    {
-      "key": "cmd+h",
+      "key": "ctrl+g",
       "command": "editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
@@ -1059,16 +1059,35 @@
       "when": "editorTextFocus"
    },
    // Slightly easier keybindings for navigating search results:
-   // - ctrl+g instead of cmd+shift+g for find previous (this is easier, and note the
-   //   mnemonic that, on my Kinesis keyboard, ctrl is above cmd - hence ctrl for finding
-   //   up and cmd for finding down).
-   // - Add shift to cmd+g or ctrl+g to find next/previous selection (mnemonic: shift
+   // - cmd+h (instead of cmd+g) for find next, cmd+g (instead of cmd+shift+g) for find previous
+   //   (note the mnemonic that g is above h - hence g for finding up nad h for finding down)
+   // - Add shift to cmd+h or cmd+g to find next/previous selection (mnemonic: shift
    //   selects things)
    // - Down and up arrows instead of enter / shift-enter for navigating find results.
    //   Note that this overrides using the arrows for navigating history, but opt+up /
    //   opt+down can already be used for that, too.
    {
-      "key": "ctrl+g",
+      "key": "cmd+h",
+      "command": "editor.action.nextMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "cmd+g",
+      "command": "-editor.action.nextMatchFindAction",
+      "when": "editorFocus"
+   },
+   {
+      "key": "cmd+h",
+      "command": "workbench.action.terminal.findNext",
+      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+   },
+   {
+      "key": "cmd+g",
+      "command": "-workbench.action.terminal.findNext",
+      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+   },
+   {
+      "key": "cmd+g",
       "command": "editor.action.previousMatchFindAction",
       "when": "editorFocus"
    },
@@ -1078,7 +1097,7 @@
       "when": "editorFocus"
    },
    {
-      "key": "ctrl+g",
+      "key": "cmd+g",
       "command": "workbench.action.terminal.findPrevious",
       "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
    },
@@ -1086,16 +1105,6 @@
       "key": "shift+cmd+g",
       "command": "-workbench.action.terminal.findPrevious",
       "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-   },
-   {
-      "key": "ctrl+shift+g",
-      "command": "-workbench.view.scm",
-      "when": "workbench.scm.active"
-   },
-   {
-      "key": "ctrl+shift+g",
-      "command": "-workbench.view.scm",
-      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
    },
    {
       "key": "cmd+f3",
@@ -1195,12 +1204,12 @@
       "when": "editorFocus"
    },
    {
-      "key": "shift+cmd+g",
+      "key": "shift+cmd+h",
       "command": "saveandrestorecursorposition.findNextSelectionWithSavedCursorPosition",
       "when": "editorFocus"
    },
    {
-      "key": "ctrl+shift+g",
+      "key": "shift+cmd+g",
       "command": "saveandrestorecursorposition.findPreviousSelectionWithSavedCursorPosition",
       "when": "editorFocus"
    },
