@@ -1286,5 +1286,21 @@
       "key": "alt+q",
       "command": "-rewrap.rewrapComment",
       "when": "editorTextFocus"
+   },
+   // The Trailing Spaces extension's trimOnSave doesn't seem to work properly. So instead
+   // make cmd+s execute a delete trailing spaces command before saving.
+   {
+      "key": "cmd+s",
+      "command": "-workbench.action.files.save"
+   },
+   {
+      "key": "cmd+s",
+      "command": "extension.multiCommand.execute",
+      "args": {
+         "sequence": [
+            "trailing-spaces.deleteTrailingSpaces",
+            "workbench.action.files.save"
+         ]
+      }
    }
 ]
