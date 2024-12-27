@@ -1302,5 +1302,24 @@
             "workbench.action.files.save"
          ]
       }
+   },
+   // Make it easier to navigate git diffs. My hope was to make this totally
+   // keyboard-centric, using ctrl+cmd+s for staging, ctrl+cmd+r for reverting, ctrl+cmd+u
+   // for unstaging, ctrl+cmd+down for next change and ctrl+cmd+up for previous change.
+   // But I can't find a command that works right for staging the current block. So I'm
+   // going to live with doing this with a mix of keyboard and mouse: keyboard for
+   // navigating diffs and mouse to click the button to stage. To facilitate this, I'm
+   // using a reasonably easy keybinding that I can do entirely with my left hand (cmd+e;
+   // mnemonic: nExt), so my left hand can be on the keyboard and my right hand on the
+   // mouse.
+   {
+      "key": "cmd+e",
+      "command": "workbench.action.compareEditor.nextChange",
+      "when": "isInDiffEditor"
+   },
+   {
+      "key": "shift+cmd+e",
+      "command": "workbench.action.compareEditor.previousChange",
+      "when": "isInDiffEditor"
    }
 ]
