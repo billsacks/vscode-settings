@@ -1330,5 +1330,16 @@
       "key": "cmd+.",
       "command": "workbench.action.compareEditor.previousChange",
       "when": "isInDiffEditor"
+   },
+   // Change the shortcut for delete lines to be more similar to ctrl+k and easier to press
+   {
+      "key": "ctrl+cmd+k",
+      "command": "editor.action.deleteLines",
+      "when": "textInputFocus && !editorReadonly"
+   },
+   {
+      "key": "shift+cmd+k",
+      "command": "-editor.action.deleteLines",
+      "when": "textInputFocus && !editorReadonly"
    }
 ]
