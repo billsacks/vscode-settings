@@ -1,4 +1,8 @@
 {
+   // The following settings often get changed due to my toggling things
+   "diffEditor.ignoreTrimWhitespace": true,
+   "diffEditor.renderSideBySide": false,
+
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
@@ -22,7 +26,7 @@
         "--indent_module=2",
         "--indent_procedure=2",
         "--indent_associate=0"
-      ],    
+      ],
     "gitlens.views.contributors.showStatistics": true,
     "git.openRepositoryInParentFolders": "always",
     "git.untrackedChanges": "separate",
@@ -54,7 +58,6 @@
    "editor.stickyScroll.defaultModel": "foldingProviderModel",
     "editor.tabSize": 3,
     "rewrap.wrappingColumn": 90,
-    "diffEditor.ignoreTrimWhitespace": false,
     "[plaintext]": {
         "editor.quickSuggestions": {
             "other": false,      // or "off"
@@ -70,7 +73,6 @@
         "editor.unicodeHighlight.invisibleCharacters": false
     },
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-"diffEditor.renderSideBySide": false,
 "editor.detectIndentation": false,
 "C_Cpp.dimInactiveRegions": false,
 "gitlens.views.commitDetails.files.layout": "list",
