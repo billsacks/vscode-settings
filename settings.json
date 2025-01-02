@@ -195,5 +195,6 @@
 "trailing-spaces.highlightCurrentLine": false,
 "[FortranFreeForm]": {
    "editor.formatOnPaste": false
-}
+},
+"editor.tabCompletion": "onlySnippets"
 }
