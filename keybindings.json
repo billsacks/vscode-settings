@@ -1418,5 +1418,27 @@
    {
       "key": "shift+cmd+b b",
       "command": "workbench.view.extension.bookmarks"
+   },
+   // Change Bookmarks keybindings: use X instead of L. This puts the bookmarks shortcuts
+   // on adjacent keys in Dvorak, as they are designed to be with QWERTY.
+   {
+      "key": "shift+alt+x",
+      "command": "bookmarks.expandSelectionToNext",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+alt+l",
+      "command": "-bookmarks.expandSelectionToNext",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "alt+cmd+x",
+      "command": "bookmarks.jumpToNext",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "alt+cmd+l",
+      "command": "-bookmarks.jumpToNext",
+      "when": "editorTextFocus"
    }
 ]
