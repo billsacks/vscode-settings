@@ -1341,5 +1341,82 @@
       "key": "shift+cmd+k",
       "command": "-editor.action.deleteLines",
       "when": "textInputFocus && !editorReadonly"
+   },
+   // Make the shortcuts for showing various views in the sidebar more consistent with
+   // each other, and put them on a shift+cmd+b chord to avoid filling up too many
+   // keybindings. (Note that the shift+cmd+b f key bindings duplicate what's also
+   // possible with ctrl+cmd+f.)
+   {
+      "key": "shift+cmd+b",
+      "command": "-workbench.action.tasks.build",
+      "when": "taskCommandsRegistered"
+   },
+   {
+      "key": "shift+cmd+b e",
+      "command": "workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+   },
+   {
+      "key": "shift+cmd+e",
+      "command": "-workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+   },
+   {
+      "key": "shift+cmd+b x",
+      "command": "workbench.view.extensions",
+      "when": "viewContainer.workbench.view.extensions.enabled"
+   },
+   {
+      "key": "shift+cmd+x",
+      "command": "-workbench.view.extensions",
+      "when": "viewContainer.workbench.view.extensions.enabled"
+   },
+   {
+      "key": "shift+cmd+b d",
+      "command": "workbench.view.debug",
+      "when": "viewContainer.workbench.view.debug.enabled"
+   },
+   {
+      "key": "shift+cmd+d",
+      "command": "-workbench.view.debug",
+      "when": "viewContainer.workbench.view.debug.enabled"
+   },
+   {
+      "key": "shift+cmd+b f",
+      "command": "workbench.action.findInFiles"
+   },
+   {
+      "key": "shift+cmd+b f",
+      "command": "workbench.action.terminal.searchWorkspace",
+      "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+   },
+   {
+      "key": "shift+cmd+b f",
+      "command": "workbench.view.search",
+      "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+   },
+   {
+      "key": "shift+cmd+b g",
+      "command": "workbench.view.scm",
+      "when": "workbench.scm.active"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active"
+   },
+   {
+      "key": "shift+cmd+b g",
+      "command": "workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+   },
+   {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+   },
+   {
+      "key": "shift+cmd+b b",
+      "command": "workbench.view.extension.bookmarks"
    }
 ]
