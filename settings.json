@@ -201,5 +201,6 @@
 "editor.tabCompletion": "onlySnippets",
 "bookmarks.navigateThroughAllFiles": false,
 "bookmarks.keepBookmarksOnLineDelete": true,
-"github.copilot.editor.enableAutoCompletions": false
+"github.copilot.editor.enableAutoCompletions": false,
+"inlineChat.lineNaturalLanguageHint": false
 }
