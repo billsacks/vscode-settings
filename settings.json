@@ -198,5 +198,7 @@
 "[FortranFreeForm]": {
    "editor.formatOnPaste": false
 },
-"editor.tabCompletion": "onlySnippets"
+"editor.tabCompletion": "onlySnippets",
+"bookmarks.navigateThroughAllFiles": false,
+"bookmarks.keepBookmarksOnLineDelete": true
 }
