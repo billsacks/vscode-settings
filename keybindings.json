@@ -62,12 +62,12 @@
    {
       "key": "alt+cmd+space",
       "command": "editor.action.inlineSuggest.commit",
-      "when": "inlineEditIsVisible && && !editorHoverFocused && && !suggestWidgetVisible || inlineSuggestionVisible && !editorHoverFocused && !suggestWidgetVisible"
+      "when": "inlineSuggestionVisible && !editorHoverFocused && !suggestWidgetVisible"
    },
    {
       "key": "cmd+space",
       "command": "editor.action.inlineSuggest.commit",
-      "when": "inlineEditIsVisible && && !editorHoverFocused && && !suggestWidgetVisible || inlineSuggestionVisible && !editorHoverFocused && !suggestWidgetVisible"
+      "when": "inlineSuggestionVisible && !editorHoverFocused && !suggestWidgetVisible"
    },
    {
       "key": "alt+cmd+right",
