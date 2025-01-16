@@ -200,5 +200,6 @@
 },
 "editor.tabCompletion": "onlySnippets",
 "bookmarks.navigateThroughAllFiles": false,
-"bookmarks.keepBookmarksOnLineDelete": true
+"bookmarks.keepBookmarksOnLineDelete": true,
+"github.copilot.editor.enableAutoCompletions": false
 }

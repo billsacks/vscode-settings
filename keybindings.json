@@ -1,6 +1,9 @@
 // Place your key bindings in this file to override the defaults
 [
-   // Use cmd+space instead of ctrl+space to trigger suggestions
+   // Use cmd+space instead of ctrl+space to trigger suggestions, and use alt+cmd+space to
+   // trigger inline suggestions. (Allow both cmd+space and alt+cmd+space to accept inline
+   // suggestions; similarly, allow alt+cmd+right in addition to the default cmd+right to
+   // accept the next word of an inline suggestion.)
    {
       "key": "cmd+space",
       "command": "editor.action.triggerSuggest",
@@ -45,6 +48,31 @@
       "key": "cmd+space",
       "command": "acceptSelectedSuggestion",
       "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+   },
+   {
+      "key": "alt+cmd+space",
+      "command": "editor.action.inlineSuggest.trigger",
+      "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+   },
+   {
+      "key": "alt+\\",
+      "command": "-editor.action.inlineSuggest.trigger",
+      "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+   },
+   {
+      "key": "alt+cmd+space",
+      "command": "editor.action.inlineSuggest.commit",
+      "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+   },
+   {
+      "key": "cmd+space",
+      "command": "editor.action.inlineSuggest.commit",
+      "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+   },
+   {
+      "key": "alt+cmd+right",
+      "command": "editor.action.inlineSuggest.acceptNextWord",
+      "when": "inlineSuggestionVisible && !editorReadonly"
    },
    // Swap f12 and f5; main motivation is so I can use f5 for go to definition, when my
    // left hand is on the keyboard while my right hand is on the mouse.
