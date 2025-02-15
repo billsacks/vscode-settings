@@ -22,11 +22,10 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "off",
     "fortran.formatting.findentArgs": [
-        "--indent=3",
-        "--indent_module=2",
-        "--indent_procedure=2",
-        "--indent_associate=0"
-      ],
+      "--indent=3",
+      "--indent_associate=0",
+      "--indent-continuation=6"
+   ],
     "gitlens.views.contributors.showStatistics": true,
     "git.openRepositoryInParentFolders": "always",
     "git.untrackedChanges": "separate",
