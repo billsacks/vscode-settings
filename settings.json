@@ -202,5 +202,6 @@
 "bookmarks.navigateThroughAllFiles": false,
 "bookmarks.keepBookmarksOnLineDelete": true,
 "github.copilot.editor.enableAutoCompletions": false,
-"inlineChat.lineNaturalLanguageHint": false
+"inlineChat.lineNaturalLanguageHint": false,
+"window.openFoldersInNewWindow": "on"
 }
