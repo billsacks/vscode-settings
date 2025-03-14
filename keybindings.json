@@ -1468,5 +1468,9 @@
       "key": "alt+cmd+l",
       "command": "-bookmarks.jumpToNext",
       "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+cmd+b o",
+      "command": "outline.focus"
    }
 ]
