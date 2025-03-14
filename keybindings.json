@@ -1308,14 +1308,10 @@
          ]
       }
    },
-   // Use cmd+q instead of alt+q to rewrap. I do this a lot and alt+q isn't very
-   // ergonomic. I don't think I really need a keyboard shortcut to quit.
+   // Use ctrl+\ instead of alt+q to rewrap. I do this a lot and alt+q isn't very
+   // ergonomic.
    {
-      "key": "cmd+q",
-      "command": "-workbench.action.quit"
-   },
-   {
-      "key": "cmd+q",
+      "key": "ctrl+\\",
       "command": "rewrap.rewrapComment",
       "when": "editorTextFocus"
    },
