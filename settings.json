@@ -51,7 +51,6 @@
     "editor.parameterHints.enabled": false,
    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
    "window.density.editorTabHeight": "compact",
-    "editor.hover.enabled": false,
     "editor.stickyScroll.maxLineCount": 10,
     "editor.stickyScroll.scrollWithEditor": false,
    "editor.stickyScroll.defaultModel": "foldingProviderModel",
@@ -203,5 +202,12 @@
 "bookmarks.keepBookmarksOnLineDelete": true,
 "github.copilot.editor.enableAutoCompletions": false,
 "inlineChat.lineNaturalLanguageHint": false,
-"window.openFoldersInNewWindow": "on"
+"window.openFoldersInNewWindow": "on",
+"github.copilot.enable": {
+   "*": true,
+   "plaintext": false,
+   "markdown": false,
+   "scminput": false
+},
+"editor.hover.enabled": false
 }
