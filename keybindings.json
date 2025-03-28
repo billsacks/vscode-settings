@@ -1284,6 +1284,35 @@
       "command": "-markdown.extension.editing.toggleItalic",
       "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
    },
+   // Add some key bindings to toggle various features. I'm generally using
+   // cmd+k+t+[something], but am using more direct bindings for some common things I may
+   // want to toggle.
+   {
+      "key": "cmd+k t",
+      "command": "-notebook.cell.collapseCellOutput",
+      "when": "notebookCellHasOutputs && notebookCellListFocused && !inputFocus && !notebookCellOutputIsCollapsed"
+   },
+   {
+      "key": "cmd+k t",
+      "command": "-notebook.cell.expandCellOutput",
+      "when": "notebookCellListFocused && notebookCellOutputIsCollapsed"
+   },
+   {
+      "key": "cmd+k t c",
+      "command": "toggle",
+      "when": "editorTextFocus",
+      "args": {
+         "id": "githubCopilotEnableAutoCompletions",
+         "value": [
+            {
+               "github.copilot.editor.enableAutoCompletions": true
+            },
+            {
+               "github.copilot.editor.enableAutoCompletions": false
+            }
+         ]
+      }
+   },
    // Use ctrl+h to toggle highlighting occurrences of current symbol. Note that, when
    // turning it on, I need to move the cursor (e.g., left/right arrow) for the current
    // occurrence to be highlighted.
