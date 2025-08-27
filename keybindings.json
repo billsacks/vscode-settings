@@ -945,7 +945,7 @@
    },
    // Make it easy to use selection anchors, similar to emacs's mark
    {
-      "key": "ctrl+g",
+      "key": "cmd+h",
       "command": "editor.action.setSelectionAnchor",
       "when": "editorTextFocus"
    },
@@ -955,7 +955,7 @@
       "when": "editorTextFocus"
    },
    {
-      "key": "ctrl+g",
+      "key": "cmd+h",
       "command": "editor.action.selectFromAnchorToCursor",
       "when": "editorTextFocus && selectionAnchorSet"
    },
@@ -1086,54 +1086,9 @@
       },
       "when": "editorTextFocus"
    },
-   // Slightly easier keybindings for navigating search results:
-   // - cmd+h (instead of cmd+g) for find next, cmd+g (instead of cmd+shift+g) for find previous
-   //   (note the mnemonic that g is above h - hence g for finding up nad h for finding down)
-   // - Add shift to cmd+h or cmd+g to find next/previous selection (mnemonic: shift
-   //   selects things)
-   // - Down and up arrows instead of enter / shift-enter for navigating find results.
-   //   Note that this overrides using the arrows for navigating history, but opt+up /
-   //   opt+down can already be used for that, too.
-   {
-      "key": "cmd+h",
-      "command": "editor.action.nextMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
-      "key": "cmd+g",
-      "command": "-editor.action.nextMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
-      "key": "cmd+h",
-      "command": "workbench.action.terminal.findNext",
-      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-   },
-   {
-      "key": "cmd+g",
-      "command": "-workbench.action.terminal.findNext",
-      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-   },
-   {
-      "key": "cmd+g",
-      "command": "editor.action.previousMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
-      "key": "shift+cmd+g",
-      "command": "-editor.action.previousMatchFindAction",
-      "when": "editorFocus"
-   },
-   {
-      "key": "cmd+g",
-      "command": "workbench.action.terminal.findPrevious",
-      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-   },
-   {
-      "key": "shift+cmd+g",
-      "command": "-workbench.action.terminal.findPrevious",
-      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-   },
+   // Use down and up arrows instead of enter / shift-enter for navigating find results.
+   // Note that this overrides using the arrows for navigating history, but opt+up /
+   // opt+down can already be used for that, too.
    {
       "key": "cmd+f3",
       "command": "-editor.action.nextSelectionMatchFindAction",
@@ -1174,47 +1129,8 @@
       "command": "-editor.action.previousMatchFindAction",
       "when": "editorFocus && findInputFocussed"
    },
-   // Use shift+cmd+f for find with selection because that's more mnemonic (shift
-   // selects); so use ctrl+cmd+f for findInFiles. (Note that shift+cmd+f has been moved
-   // to the saveandrestorecursorposition keybindings below.)
-   {
-      "key": "ctrl+cmd+f",
-      "command": "-workbench.action.toggleFullScreen",
-      "when": "!isIOS"
-   },
-   {
-      "key": "ctrl+cmd+f",
-      "command": "workbench.action.findInFiles"
-   },
-   {
-      "key": "shift+cmd+f",
-      "command": "-workbench.action.findInFiles"
-   },
-   {
-      "key": "ctrl+cmd+f",
-      "command": "workbench.action.terminal.searchWorkspace",
-      "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
-   },
-   {
-      "key": "shift+cmd+f",
-      "command": "-workbench.action.terminal.searchWorkspace",
-      "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
-   },
-   {
-      "key": "ctrl+cmd+f",
-      "command": "workbench.view.search",
-      "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
-   },
-   {
-      "key": "shift+cmd+f",
-      "command": "-workbench.view.search",
-      "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
-   },
-   {
-      "key": "cmd+e",
-      "command": "-actions.findWithSelection"
-   },
    // Commands for my saveandrestorecursorposition extension
+   // - Note: We add ctrl to keybinding to find with selection (ctrl+cmd+f, ctrl+cmd+g, shift+ctrl+cmd+g)
    {
       "key": "cmd+f",
       "command": "-actions.find",
@@ -1227,17 +1143,26 @@
       "when": "editorFocus || editorIsOpen"
    },
    {
-      "key": "shift+cmd+f",
+      "key": "ctrl+cmd+f",
+      "command": "-workbench.action.toggleFullScreen",
+      "when": "!isIOS"
+   },
+   {
+      "key": "cmd+e",
+      "command": "-actions.findWithSelection"
+   },
+   {
+      "key": "ctrl+cmd+f",
       "command": "saveandrestorecursorposition.findWithSelectionWithSavedCursorPosition",
       "when": "editorFocus"
    },
    {
-      "key": "shift+cmd+h",
+      "key": "ctrl+cmd+g",
       "command": "saveandrestorecursorposition.findNextSelectionWithSavedCursorPosition",
       "when": "editorFocus"
    },
    {
-      "key": "shift+cmd+g",
+      "key": "shift+ctrl+cmd+g",
       "command": "saveandrestorecursorposition.findPreviousSelectionWithSavedCursorPosition",
       "when": "editorFocus"
    },
