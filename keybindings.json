@@ -1129,6 +1129,16 @@
       "command": "-editor.action.previousMatchFindAction",
       "when": "editorFocus && findInputFocussed"
    },
+   // Add this potentially more ergonomic keybinding to find previous - especially when
+   // doing it repeatedly (it's especially more ergonomic if I move my left hand to more
+   // comfortably hold down ctrl) (note that we still keep the default keybinding because
+   // that can be easier in some circumstances and fits better with muscle memory in other
+   // applications).
+   {
+      "key": "ctrl+g",
+      "command": "editor.action.previousMatchFindAction",
+      "when": "editorFocus"
+   },
    // Commands for my saveandrestorecursorposition extension
    // - Note: We add ctrl to keybinding to find with selection (ctrl+cmd+f, ctrl+cmd+g, shift+ctrl+cmd+g)
    {
