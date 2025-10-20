@@ -999,13 +999,13 @@
       "key": "ctrl+l p",
       "command": "-extension.openPrGitProvider"
    },
-   // Shortcuts for seeing most recently used editors
+   // Shortcuts for seeing most recently used editors; note similarity to cmd+p
    {
-      "key": "ctrl+x ctrl+e",
+      "key": "shift+cmd+p shift+e",
       "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
    },
    {
-      "key": "ctrl+x e",
+      "key": "shift+cmd+p e",
       "command": "workbench.action.showEditorsInActiveGroup"
    },
    // Use cmd+\ for jump to bracket and shift+cmd+\ for select to bracket
@@ -1432,5 +1432,15 @@
    {
       "key": "shift+cmd+b o",
       "command": "outline.focus"
+   },
+   // Use ctrl+x instead of shift+cmd+p to show all commands, because I keep confusing
+   // cmd+p with shift+cmd+p.
+   {
+      "key": "ctrl+x",
+      "command": "workbench.action.showCommands"
+   },
+   {
+      "key": "shift+cmd+p",
+      "command": "-workbench.action.showCommands"
    }
 ]
