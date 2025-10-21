@@ -52,12 +52,12 @@
    {
       "key": "alt+cmd+space",
       "command": "editor.action.inlineSuggest.trigger",
-      "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+      "when": "editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
    },
    {
       "key": "alt+\\",
       "command": "-editor.action.inlineSuggest.trigger",
-      "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+      "when": "editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
    },
    {
       "key": "alt+cmd+space",
