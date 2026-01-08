@@ -118,6 +118,7 @@
 ],
 "git.ignoreSubmodules": true,
 "git.detectSubmodules": false,
+"git.detectWorktrees": false,
 "editor.indentSize": "tabSize",
 "editor.useTabStops": false,
 "makefile.configureOnOpen": true,
