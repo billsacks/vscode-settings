@@ -1442,5 +1442,9 @@
    {
       "key": "shift+cmd+p",
       "command": "-workbench.action.showCommands"
+   },
+   {
+      "key": "shift+cmd+g",
+      "command": "-editor.action.announceCursorPosition"
    }
 ]
